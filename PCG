@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pronance Capital Group - Loan Services</title>
+    <style>
+        body { background-color: #111; color: #fff; font-family: Arial, sans-serif; text-align: center; }
+        .container { width: 80%; margin: auto; }
+        .service-box { display: inline-block; width: 30%; padding: 20px; background: rgba(255,255,255,0.1); margin: 10px; border-radius: 10px; }
+        .apply-btn { background: yellow; color: #111; padding: 10px 20px; border: none; cursor: pointer; margin-top: 10px; }
+        .form-container { background: #222; padding: 20px; border-radius: 10px; margin-top: 50px; }
+        input, select { width: 80%; padding: 10px; margin: 10px 0; border-radius: 5px; border: none; }
+        .submit-btn { background: yellow; color: #111; padding: 10px 20px; border: none; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>OUR SERVICES</h2>
+        <div class="service-box">
+            <h3>Personal Loan</h3>
+            <p>Fast Approval, No Collateral, Low Interest.</p>
+            <button class="apply-btn" onclick="applyNow('Personal Loan')">APPLY NOW</button>
+        </div>
+        <div class="service-box">
+            <h3>Business Loan</h3>
+            <p>Up to RM2,000,000 with Tax Relief.</p>
+            <button class="apply-btn" onclick="applyNow('Business Loan')">APPLY NOW</button>
+        </div>
+        <div class="service-box">
+            <h3>Housing Refinancing</h3>
+            <p>Lower Interest, Long Tenure.</p>
+            <button class="apply-btn" onclick="applyNow('Housing Refinancing')">APPLY NOW</button>
+        </div>
+        
+        <div id="inquiry-form" class="form-container">
+            <h2>INQUIRY</h2>
+            <p>Get expert advice for fast and easy loan approval.</p>
+            <form action="#" method="post">
+                <input type="text" name="name" placeholder="Name" required><br>
+                <input type="text" name="contact" placeholder="Contact Number" required><br>
+                <input type="email" name="email" placeholder="Email Address" required><br>
+                <select name="service" id="service">
+                    <option value="Personal Loan">Personal Loan</option>
+                    <option value="Business Loan">Business Loan</option>
+                    <option value="Housing Refinancing">Housing Refinancing</option>
+                </select><br>
+                <button type="submit" class="submit-btn">SUBMIT</button>
+            </form>
+        </div>
+    </div>
+    
+    <script>
+        function applyNow(serviceType) {
+            document.getElementById('service').value = serviceType;
+            document.getElementById('inquiry-form').scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
